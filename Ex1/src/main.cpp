@@ -25,9 +25,9 @@ int main(int argc, char *argv[])
 
 	char nome[30];
 	cout << "Digite o nome para salvar: ";
-	strcat(nome, ".txt");
 	cin >> nome;
 	cin.ignore();
+	strcat(nome, ".txt");
 	FILE *arquivo = fopen(nome, "w");
 	fprintf(arquivo, "O preco informado foi: %.2f e o preco inflacionado eh: %.2f", price, inflacionado);
 	return 0;
