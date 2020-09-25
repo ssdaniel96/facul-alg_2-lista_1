@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string.h>
 
 using namespace std;
 
@@ -41,7 +42,15 @@ int main()
 		break;
 	}
 
-	cout << value1 << ' ' << op  << ' ' << value2 << " = " << result;
+	cout << value1 << ' ' << op  << ' ' << value2 << " = " << result << endl;
+	cout << "Digite o nome para salvar: ";
+	char nome[30];
+	cin >> nome;
+	cin.ignore();
+	strcat(nome, ".txt");
+	FILE *arquivo = fopen(nome, "w");
+	fprintf(arquivo, "A operacao foi: %.2f %c %.2f = %.2f", value1, op, value2, result);
+	fclose(arquivo);
 
 	return 0;
 }
