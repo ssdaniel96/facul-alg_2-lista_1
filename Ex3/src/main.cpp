@@ -44,16 +44,22 @@ struct vector<grades> doQuestions(){
 }
 
 void printVector(vector<grades> studentGrades){
+	FILE *arquivo = fopen("notas.txt", "w");
 	cout << "Gostei tanto de aprender sobre os vectores que vou imprimir todas as notas por aluno!" << endl;
+	fprintf(arquivo, "Gostei tanto de aprender sobre os vectores que vou imprimir todas as notas por aluno!\n");
 	int size = studentGrades.size();
 	for(int i = 0; i < size; i++){
 		cout << "=============" << i+1 <<".st aluno =========="<<endl;
+		fprintf(arquivo, "============= %d.st aluno ==========\n", i+1);
 		for(int j=0; j<2;j++){
-			cout << "Nota " << j << ": " << studentGrades[i].grade[j] << endl;
+			cout << "Nota " << j+1 << ": " << studentGrades[i].grade[j] << endl;
+			fprintf(arquivo, "Nota %d: %.2f\n", j+1, studentGrades[i].grade[j]);
 		}
 
 	}
 	cout << "=================== FIM ================" << endl;
+	fprintf(arquivo, "=================== FIM ================\n");
+	fclose(arquivo);
 }
 
 int main(int argc, char *argv[])
