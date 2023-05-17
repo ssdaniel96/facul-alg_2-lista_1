@@ -1,7 +1,7 @@
-# alg2_listaExercicios1
-Apenas 10 exercícios da matéria da faculdade
+# SOBRE
+Apenas 10 exercícios da matéria Algoritmos 2 do curso de Engenharia de Computação do UNASP.
 
-Lista de exercícios 1
+## Lista de exercícios 1
 Engenharia da computação – 2020
 Selecione três exercícios para armazenar os dados da execução em um arquivo .txt
 
